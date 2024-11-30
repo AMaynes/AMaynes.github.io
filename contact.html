@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/My_logo.jpg" alt="Alex Maynes Logo" class="logo-img">
+        </a>
+        <nav>
+            <a href="blog.html">Blog</a>
+            <a href="projects.html">Personal Projects</a>
+            <a href="research.html">Research & Publications</a>
+            <a href="contact.html" class="current">Contact</a>
+            <a href="https://github.com/AMaynes" target="_blank">
+                <img src="assets/GitHub_logo.png" alt="GitHub Icon" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/alex-m-28458225b/" target="_blank">
+                <img src="assets/linkedIn_logo.png" alt="LinkedIn Icon" class="icon">
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="contact">
+        <div class="header-button-row">
+            <!-- Column 1 -->
+            <div class="header-button">
+                <h1>Looking for my life's work in a pdf?</h1>
+                <a href="assets/Resume.pdf" target="_blank" class="button">Resume</a>
+            </div>
+    
+            <!-- Column 2 -->
+            <div class="header-button">
+                <h1>Please feel free to message me :)</h1>
+                <button class="button" onclick="openContactModal()">Contact Me</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactModal()">&times;</span>
+            <h2>Contact Me</h2>
+            <form id="contactForm" action="https://formspree.io/f/meoqplzq" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+            
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            
+                <button type="submit">Send</button>
+            </form>            
+    
+            <!-- Success Message -->
+            <p id="formResponse" style="display:none; color: green; text-align: center; margin-top: 1rem;">
+                Thank you for your message! I'll get back to you soon.
+            </p>
+        </div>
+    </div>       
+
+    <!-- Footer -->
+    <footer>
+        <div class="social">
+            <a href="https://github.com/AMaynes" target="_blank">
+                <img src="assets/GitHub_logo.png" alt="GitHub Icon" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/alex-m-28458225b/" target="_blank">
+                <img src="assets/linkedIn_logo.png" alt="LinkedIn Icon" class="icon">
+            </a>
+        </div>
+        <p>© Alex Maynes 2024</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Open Modal
+        function openContactModal() {
+            document.getElementById("contactModal").style.display = "flex";
+        }
+
+        // Close Modal
+        function closeContactModal() {
+            document.getElementById("contactModal").style.display = "none";
+            document.getElementById("formResponse").style.display = "none"; // Hide success message on close
+            document.getElementById("contactForm").reset(); // Reset form fields
+        }
+
+        // Close Modal When Clicking Outside
+        window.onclick = function (event) {
+            const modal = document.getElementById("contactModal");
+            if (event.target === modal) {
+                closeContactModal();
+            }
+        };
+
+        // Handle Form Submission
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form from actually submitting
+            document.getElementById("formResponse").style.display = "block"; // Show success message
+            document.getElementById("contactForm").reset(); // Clear the form fields
+        });
+    </script>
+</body>
+</html>
