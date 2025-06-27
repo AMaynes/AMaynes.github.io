@@ -4,23 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Computer Science Database</title>
-  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Computer Science Database</h1>
+  <header class="site-header">
+    <h1>Artificially Neuroscience</h1>
     <nav>
-        <a href="../../index.html">Home</a>
-        <a href="../../literature_analysis/index.html">Literature Analysis</a>
-        <a href="../../research_publications/index.html">Research Publications</a>
-        <a href="../index.html">Educational Resources</a>
-      </nav>
+      <a href="/index.html">Home</a>
+      <a href="/research_publications/index.html">Research Publications</a>
+      <a href="/literature_analysis/index.html">Literature Analysis</a>
+      <a href="/educational_resources/index.html">Educational Resources</a>
+    </nav>
   </header>
 
-  <!-- Load the generic loader and call it -->
-  <script src="../../genericListLoader.js"></script>
+  <main>
+    <section id="compsci-section">
+      <h2>Computer Science Resources</h2>
+      <ul id="pub-list"></ul>
+    </section>
+  </main>
+
+  <script src="/genericListLoader.js"></script>
   <script>
-    loadList("compsci_notes_list.txt", "pub-list");
+    loadList("educational_resources/neurosci/neurosci_notes_list.txt", "pub-list");
   </script>
 </body>
 </html>

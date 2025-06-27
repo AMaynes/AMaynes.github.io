@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <header>
-    <h1>Research Publications</h1>
+  <header class="site-header">
+    <h1>Artificially Neuroscience</h1>
     <nav>
       <a href="../index.html">Home</a>
       <a href="../literature_analysis/index.html">Literature Analysis</a>
@@ -17,24 +17,25 @@
   </header>
 
   <main>
+    <h2>Research Publications</h2>
     <!-- Section: My Publications -->
     <section id="my-publications">
-      <h2>My Publications</h2>
-      <ul id="pub-list"></ul>
+      <h3>My Publications</h3>
+      <ul id="research-pub-list" class="indented-list"></ul></ul>
     </section>
 
     <!-- Section: Other Useful Publications -->
     <section id="useful-publications">
-      <h2>Other Useful Publications</h2>
-      <ul id="interesting-list"></ul>
+      <h3>Other Great Publications</h3>
+      <ul id="more-pubs-list" class="indented-list"></ul></ul>
     </section>
   </main>
 
   <!-- Load the generic loader and call it for each list -->
   <script src="../genericListLoader.js"></script>
   <script>
-    loadList("publications.txt",      "pub-list");
-    loadList("extra-publications.txt",       "interesting-list");
+    loadList("publications.txt", "research-pub-list");
+    loadList("extra-publications.txt", "more-pubs-list");
   </script>
 </body>
 </html>

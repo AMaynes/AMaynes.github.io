@@ -1,47 +1,48 @@
-/* Base resets */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Reset & Base */
+* { margin:0; padding:0; box-sizing:border-box }
+body { font-family:sans-serif; background:#f8f9fa; color:#222 }
 
-/* Page body */
-body {
-  font-family: sans-serif;
-  background: #f8f9fa;
-  color: #222;
-}
-
-/* Flex container for header */
+/* Header */
 .site-header {
-  display: flex;                     /* Enable flexbox */
-  justify-content: space-between;    /* Title left, nav right */
-  align-items: center;               /* Vertical centering */
-  padding: 1rem 2rem;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 2rem; background:#fff;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1)
 }
-
-/* Make nav links align horizontally */
-.site-header nav {
-  display: flex;                     /* Ensure links are in one row */
-}
-
-/* Space out each link */
+.site-header h1 { font-size:1.5rem }
+.site-header nav { display:flex }
 .site-header nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  color: #222;
+  margin-left:1.5rem; font-weight:bold;
+  color:#222; text-decoration:none
+}
+.site-header nav a:hover { text-decoration:underline }
+
+/* Main */
+main { padding:1rem 2rem; line-height:1.6 }
+main h2 { margin-bottom:1rem }
+main h3 { margin-left:1rem }
+main p  { margin-bottom:2rem }
+
+/* Lists */
+#resources-list,
+#research-pub-list,
+#more-pubs-list {
+  list-style:none; padding-left:1rem; margin-bottom:2rem
+}
+#resources-list li,
+#research-pub-list li,
+#more-pubs-list li {
+  margin:0 0 1rem 2rem
 }
 
-/* Hover effect */
-.site-header nav a:hover {
-  text-decoration: underline;
+/* Links */
+#resources-list a,
+#research-pub-list a,
+#more-pubs-list a {
+  color:rgb(43,59,116); text-decoration:none
 }
-
-/* Main content */
-main {
-  padding: 2rem;
-  line-height: 1.6;
-}
+#resources-list a:visited,
+#research-pub-list a:visited,
+#more-pubs-list a:visited { color:inherit }
+#resources-list a:hover,
+#research-pub-list a:hover,
+#more-pubs-list a:hover { text-decoration:underline }

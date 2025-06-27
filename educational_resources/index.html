@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <header>
-    <h1>Educational Resources</h1>
+  <header class="site-header">
+    <h1>Artificially Neuroscience</h1>
     <nav>
       <a href="../index.html">Home</a>
       <a href="../literature_analysis/">Literature Analysis</a>
@@ -17,11 +17,18 @@
   </header>
 
   <main>
+    <section id="educational_resources-section">
+      <h2>Educational Resources</h2>
+      <ul id="resources-list"></ul>
+    </section>
+  </main>
+
+  <main>
     <p>Select a category below to view a database I've created of my notes, models, and external links relating to that topic.</p>
-    <ul>
-      <li><a href="./compsci/">💻 Computer Science Notes &amp; Models</a></li>
-      <li><a href="./neurosci/">🧠 Neuroscience Notes &amp; Models</a></li>
-      <li><a href="./mathematics/">📐 Mathematics Notes &amp; Models</a></li>
+    <ul id="resources-list">
+      <li id="compsci"><a href="compsci/index.html">💻 Computer Science</a></li>
+      <li id="neurosci"><a href="neurosci/index.html">🧠 Neuroscience</a></li>
+      <li id="mathematics"><a href="mathematics/index.html">📐 Mathematics</a></li>
     </ul>
   </main>
 </body>
