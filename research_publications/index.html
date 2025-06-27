@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research Publications</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
@@ -10,20 +11,30 @@
     <h1>Research Publications</h1>
     <nav>
       <a href="../index.html">Home</a>
-      <a href="../literature_analysis/">Literature Analysis</a>
-      <a href="../educational_resources/">Educational Resources</a>
+      <a href="../literature_analysis/index.html">Literature Analysis</a>
+      <a href="../educational_resources/index.html">Educational Resources</a>
     </nav>
   </header>
 
   <main>
-    <p>This is a database of all my non-classified research publications & endeavors.</p>
-    <ul id="pub-list"></ul>
+    <!-- Section: My Publications -->
+    <section id="my-publications">
+      <h2>My Publications</h2>
+      <ul id="pub-list"></ul>
+    </section>
+
+    <!-- Section: Other Useful Publications -->
+    <section id="useful-publications">
+      <h2>Other Useful Publications</h2>
+      <ul id="interesting-list"></ul>
+    </section>
   </main>
 
-  <!-- Load the generic loader and call it -->
+  <!-- Load the generic loader and call it for each list -->
   <script src="../genericListLoader.js"></script>
   <script>
-    loadList("publications.txt", "pub-list");
+    loadList("publications.txt",      "pub-list");
+    loadList("extra-publications.txt",       "interesting-list");
   </script>
 </body>
 </html>

@@ -1,0 +1,4 @@
+<Entry>
+Name: "Synaptic Information Storage Capacity Measured With Information Theory - T. Bartol et al."
+PDF-Path: "pdfs/synaptic-info-storage-pub.pdf"
+<Entry-End>
