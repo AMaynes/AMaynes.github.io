@@ -1,14 +1,43 @@
+/* Base body styling */
 body {
   font-family: sans-serif;
-  margin: 2em;
+  margin: 0;
+  padding: 0;
   background: #f8f9fa;
   color: #222;
 }
-nav a {
-  margin-right: 1em;
+
+/* Site-wide header container */
+.site-header {
+  display: flex;                      /* enables flexbox */
+  justify-content: space-between;     /* left/right spacing */
+  align-items: center;                /* vertical centering */
+  padding: 1rem 2rem;                 /* top/bottom and sides */
+  background-color: #ffffff;          /* white background */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+/* Header title styling */
+.site-header h1 {
+  margin: 0;                          /* remove default margin */
+  font-size: 1.5rem;                  /* larger font size */
+}
+
+/* Navigation links */
+.site-header nav a {
+  margin-left: 1.5rem;                /* space between links */
   text-decoration: none;
   font-weight: bold;
+  color: #222;
 }
+
+/* Nav hover effect */
+.site-header nav a:hover {
+  text-decoration: underline;         /* underline on hover */
+}
+
+/* Main content area */
 main {
-  margin-top: 2em;
+  margin: 2rem;                       /* space around main */
+  line-height: 1.6;                   /* readable line height */
 }
