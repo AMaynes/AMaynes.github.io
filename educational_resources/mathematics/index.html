@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artificially Neuroscience</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Mathematics Database</title>
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <header>
-    <h1>Artificially Neuroscience</h1>
+    <h1>Mathematics Database</h1>
     <nav>
-      <a href="research_publications/">Research</a>
-      <a href="literature_analysis/">Lit Analysis</a>
-      <a href="educational_resources/">Edu Resources</a>
+      <a href="../index.html">Home</a>
+      <a href="../literature_analysis/">Literature Analysis</a>
+      <a href="../research_publications/">Research Publications</a>
+      <a href="../educational_resources/">Educational Resources</a>
     </nav>
   </header>
-  <main>
-    <p>Welcome! This site hosts my notes, reflections, and published work on Computer Science, Neuroscience, and Mathematics.</p>
-    <section id="publications">
-      <h2>Publications</h2>
-      <ul id="pub-list"></ul>
-    </section>
-  </main>
-  <script src="research_publications/publications.js"></script>
+
+  <!-- Load the generic loader and call it -->
+  <script src="../../genericListLoader.js"></script>
+  <script>
+    loadList("mathematics_notes_list.txt", "pub-list");
+  </script>
 </body>
 </html>

@@ -2,11 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Computer Science Resources</title>
+  <title>Literature Analysis</title>
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <h1>Computer Science Resources</h1>
-  <ul id="resource-list"></ul>
-  <script src="analysis_list.js"></script>
+  <header>
+    <h1>Literature Analysis</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../research_publications/">Research Publications</a>
+      <a href="../educational_resources/">Educational Resources</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>This is a list of works I have read, analyzed, and documented for myself 
+      and others should they be interested or find useful.<p>
+    <ul id="pub-list"></ul>
+  </main>
+
+  <!-- Load the generic loader and call it -->
+  <script src="../genericListLoader.js"></script>
+  <script>
+    loadList("lit_analysis_list.txt", "pub-list");
+  </script>
 </body>
 </html>
