@@ -1,6 +1,7 @@
 // genericListLoader.js — supports <Entry> blocks
 
 function loadList(textFile, listId) {
+  console.log("Loader script processing.");
   fetch(textFile)
     .then(res => res.text())
     .then(text => {
