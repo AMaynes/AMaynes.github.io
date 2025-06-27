@@ -1,43 +1,47 @@
-/* Base body styling */
-body {
-  font-family: sans-serif;
+/* Base resets */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page body */
+body {
+  font-family: sans-serif;
   background: #f8f9fa;
   color: #222;
 }
 
-/* Site-wide header container */
+/* Flex container for header */
 .site-header {
-  display: flex;                      /* enables flexbox */
-  justify-content: space-between;     /* left/right spacing */
-  align-items: center;                /* vertical centering */
-  padding: 1rem 2rem;                 /* top/bottom and sides */
-  background-color: #ffffff;          /* white background */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow */
+  display: flex;                     /* Enable flexbox */
+  justify-content: space-between;    /* Title left, nav right */
+  align-items: center;               /* Vertical centering */
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Header title styling */
-.site-header h1 {
-  margin: 0;                          /* remove default margin */
-  font-size: 1.5rem;                  /* larger font size */
+/* Make nav links align horizontally */
+.site-header nav {
+  display: flex;                     /* Ensure links are in one row */
 }
 
-/* Navigation links */
+/* Space out each link */
 .site-header nav a {
-  margin-left: 1.5rem;                /* space between links */
+  margin-left: 1.5rem;
   text-decoration: none;
   font-weight: bold;
   color: #222;
 }
 
-/* Nav hover effect */
+/* Hover effect */
 .site-header nav a:hover {
-  text-decoration: underline;         /* underline on hover */
+  text-decoration: underline;
 }
 
-/* Main content area */
+/* Main content */
 main {
-  margin: 2rem;                       /* space around main */
-  line-height: 1.6;                   /* readable line height */
+  padding: 2rem;
+  line-height: 1.6;
 }
